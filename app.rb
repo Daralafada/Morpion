@@ -27,3 +27,11 @@ puts "Hello, #{user1.name} et #{user2.name} !"
 puts "Voici le plateau avec lequel on va jouer :"
 
 board.show_board_state
+
+puts 
+puts "Commençons le jeu !"
+puts "#{user1.name}, tu seras les X et #{user2.name} tu seras les O. "
+
+puts "#{user1.name} choisit une case > " 
+user1.user1_case_choice
+

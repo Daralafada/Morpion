@@ -1,21 +1,33 @@
 require "pry" 
 
-class Boardcase 
+class Boardcase < Board
+	attr_accessor :case_value
 
-	def case_state
-		 case_state = []
+	def initialize 
+		@case_value = " "
 	end
-
-	def case_hash
-		case_hash = Hash.new { |hash, board_arr| hash[board_arr] = case_state }
-	end 
 end
 
 
-class Board < Boardcase
+class Board 
 
-	def show_board_state
-	board_arr = ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3"]
+attr_accessor:board
+
+	def initialize
+		a1 = Boardcase.new 
+		a2 = Boardcase.new 
+		a3 = Boardcase.new 
+		b1 = Boardcase.new 
+		b2 = Boardcase.new 
+		b3 = Boardcase.new 
+		c1 = Boardcase.new 
+		c2 = Boardcase.new 
+		c3 = Boardcase.new 
+	board_arr = [a1, a2, a3, b1, b2, b3, c1, c2, c3]
+	@board = board_arr
+	end 
+
+	def show_board
 	puts	"
 	__________
 	|#{board_arr[0]}|#{board_arr[3]}|#{board_arr[6]}|
@@ -27,7 +39,6 @@ class Board < Boardcase
 	"
 	end 
 end
-
 
 
 
